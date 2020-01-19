@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: inherit;
+    text-decoration: none;
+    font-size: 0;
+}
+
+img{
+    vertical-align: top;
+    user-select: none;
+}
+
+#wrap{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #222;
+}
+
+.btn li{
+    width: 50%;
+    height: calc(100% - 170px);
+    position: absolute;
+    transition: all 0.2s;
+}
+
+.btn li.prv:active{background: linear-gradient(to right,rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);}
+.btn li.nxt:active{background: linear-gradient(to left,rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);}
+.btn li.prv:active img{left: 20px;}
+.btn li.nxt:active img{right: 20px;}
+
+.btn li img{
+    width: 70px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    opacity: 0.7;
+}
+
+.btn li.prv img{left: 30px;}
+.btn li.nxt img{right: 30px;}
+
+.btn .prv{
+    top: 0;
+    left: 0;
+}
+
+.btn .nxt{
+    top: 0;
+    right: 0;
+}
+
+.slider{
+    width: 100%;
+    background-color: #222;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -546px;
+    font-size: 0;
+    padding: 0 0 40px;
+}
+
+.s_wrap{
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #222;
+}
+
+.slider figure{
+    width: 208.4px;
+    height: 120px;
+    margin: 5px;
+    background-color: #666;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 70px;
+    text-align: center;
+    line-height: 120px;
+    font-weight: bold;
+    font-family: arial;
+    color: #fff;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.pager{
+    position: absolute;
+    bottom: 170px;
+    left: 0;
+    width: 100%;
+    height: 0;
+}
+
+.pager li{
+    width: calc((100% - 1092px) / 2);
+    height: 170px;
+    padding-top: 0px;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.pager li:first-child{
+    float: left;
+    background: linear-gradient(to right, #222 0%, #222 45%, rgba(0,0,0,0.0) 100%);
+}
+.pager li:last-child{
+    float: right;
+    background: linear-gradient(to left, #222 0%, #222 45%, rgba(0,0,0,0.0) 100%);
+}
+
+/* .pager li:first-child:active{background: linear-gradient(to right, purple 0%, rgba(0,0,0,0) 100%);}
+.pager li:last-child:active{background: linear-gradient(to left, purple 0%, rgba(0,0,0,0) 100%);} */
+.pager li:first-child:active img{left: 5px;}
+.pager li:last-child:active img{right: 5px;}
+
+.pager li img{
+    width: 70px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    opacity: 0.8;
+}
+
+.pager li.left img{
+    left: 15px;
+}
+
+.pager li.right img{
+    right: 15px;
+}
+
+input{
+    width: 100px;
+    height: 30px;
+}
+
+/****************/
+
+figure.active{
+    box-shadow: 0 0 5px 5px #aaa;
+}
+
+figure p{
+    display: none;
+}
+
+figure span{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 70px;
+}
+
+figure h2{
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    font-size: 12px;
+    color: #ccc;
+    line-height: 40px;
+}
+
+figure h2 .border{
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 75%;
+    left: -2px;
+}
+
+figure.active h2 .border{
+    width: 100%;
+    transition: all 0.5s;
+}
+
+
+.preview{
+    position: fixed;
+    top: calc((100vh - 170px - 500px) / 2);
+    left: 50%;
+    background-color: #fff;
+    width: 1092px;
+    height: 500px;
+    transform: translateX(-50%); 
+    font-size: 120px;
+    line-height: 500px;
+    text-align: center;
+    box-shadow: 0 0 15px 10px #ccc;
+}
+
+.preview .exp{
+    width: 100%;
+    height: 170px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+}

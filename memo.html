@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div:nth-child(1){width: 50px; height: 50px;}
+        div:nth-child(2){width: 75px; height: 75px;}
+        div:nth-child(3){width: 100px; height: 100px;}
+        div:nth-child(4){width: 125px; height: 125px;}
+        div{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+
+        var dan = prompt('구구단 출력기입니다.');
+        
+        document.write('<h1>'+dan+'단 </h1>');
+        for(i = 1; i<=9; i++){
+            document.write(i + ' X ' + dan + ' = ' + i*dan + '<hr>');
+        }
+
+    </script>
+</body>
+</html>

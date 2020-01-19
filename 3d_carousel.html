@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+        section{
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-left: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        #wrap{
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            
+        }
+        #wrap div{
+            width: 230px;
+            height: 230px;
+            background-color: #ccc;
+            font-size: 20px;
+            padding: 20px;
+            line-height: 35px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            transform: skewY(15deg);
+            position: relative;
+            left: 0;
+            top: '';
+            box-shadow: 5px 5px 10px #aaa;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="wrap">
+            <div>ggg<br>ggggg<br>1<br></div>
+            <div>ggg<br>ggggg<br>2<br></div>
+            <div>ggg<br>ggggg<br>3<br></div>
+            <div>ggg<br>ggggg<br>4<br></div>
+            <div>ggg<br>ggggg<br>5<br></div>
+            <div>ggg<br>ggggg<br>6<br></div>
+            <div>ggg<br>ggggg<br>7<br></div>
+            <div>ggg<br>ggggg<br>8<br></div>
+            <div>ggg<br>ggggg<br>9<br></div>
+            <div>ggg<br>ggggg<br>10<br></div>
+            <div>ggg<br>ggggg<br>11<br></div>
+            <div>ggg<br>ggggg<br>12<br></div>
+            <div>ggg<br>ggggg<br>13<br></div>
+            <div>ggg<br>ggggg<br>14<br></div>
+            <div>ggg<br>ggggg<br>15<br></div>
+            <div>ggg<br>ggggg<br>16<br></div>
+            <div>ggg<br>ggggg<br>17<br></div>
+            <div>ggg<br>ggggg<br>18<br></div>
+        </div>
+    </section>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script>
+        var divWidth = $('#wrap div').width();
+        var divHeight = $('#wrap div').height();
+
+        for(var i=1; i<$('#wrap div').length; i++){
+
+            $('#wrap div').eq(i).css({
+                'top' : -divHeight * i * 1.1,
+                'left' : -i * 20
+            });
+
+        }
+        
+
+    </script>
+</body>
+</html>
